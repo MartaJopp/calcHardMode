@@ -3,8 +3,9 @@ $(document).ready(readyNow);//once html is loaded
 function readyNow(){
     console.log('jquery sourced');
     $('.number').on('click', firstNumber);
-     $('#add').on('click', operator);
-     $('#equals').on('click', equals)
+     $('.operator').on('click', addition);
+     $('#equals').on('click', equals);
+     $('#clear').on('click', clearScreen);
 }
 
 var firstNumberArray = [];
@@ -23,8 +24,8 @@ sendFirstNumber.push($(this).html()); // pushing numbers to array
 console.log(sendFirstNumber);
     }
 
-function operator(){
-console.log('add clicked');    //checking to make sure add button is functioning
+function addition(){
+console.log('operator clicked');    //checking to make sure add button is functioning
 firstNumberArray = [];   // firstNumber array
 firstNumberArray.push($('#calculator').html()); // on click of an operator - push calculator screen value to firstNumberArray
 console.log('firstNumber:', firstNumberArray);
@@ -36,7 +37,7 @@ console.log('Operator:', operatorArray);
 $('#calculator').html(''); // empty calculator screen
 }
 
-function equals() {
+function equals() { 
     console.log('equal clicked');
     secondNumberArray = [];   // secondNumber array
     secondNumberArray.push($('#calculator').html()); // on click of equals - push calculator screen value to secondNumberArray  
@@ -47,19 +48,34 @@ function equals() {
         number2: secondNumberArray
     }
     console.log(infoToSend);
-    $.ajax({
+    $.ajax({ // POST information to server
         method: 'POST',
-        url: '/calculate',
+        url: '/addition',
         data: infoToSend
     }).done(function(response){
         console.log(response);
+        getCalculation();
+    
     }).fail(function(message){
         console.log('Error', message);
     })
 }
 
+function getCalculation(){ // receive calculation from server
+    $.ajax({
+        method: 'GET',
+        url: '/calculate',
+    }).done(function(response){
+        var resreceived = response;
+        console.log(resreceived);
+        $('#calculator').html(''); // empty calculator screen
+        $('#calculator').append(resreceived.pop()); // append last number in array to calculator screen
+    })
+}
 
-
-
+function clearScreen(){
+    console.log('Clear button clicked');
+    $('#calculator').html('');
+}
 
 
