@@ -1,0 +1,65 @@
+html {
+    margin: 0 auto;
+    font-align: center;
+}
+
+.screen {
+    width: 400PX;
+    height: 75PX;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    font-size: 50PX;
+    text-align: right;
+    justify-content: bottom;
+    padding: 15PX;
+    margin-bottom: 10PX;
+    border-radius: 5PX;
+}
+
+.calcbuttons {
+    width: 400PX;
+    float: left;
+}
+
+.number {
+    width: 95PX;
+    margin: 5PX;
+    height: 50PX;
+    font-weight: bold;
+    font-size: 20PX;
+    border-radius: 5PX;
+}
+
+.operator {
+    width: 95PX;
+    margin: 5PX;
+    height: 50PX;
+    font-weight: bold;
+    font-size: 20PX;
+    border-radius: 5PX;
+}
+
+#zero {
+    width: 205PX;
+    margin: 5PX;
+    height: 50PX;
+}
+
+#clear {
+    width: 312PX;
+    margin: 5PX;
+    height: 50PX;
+    font-weight: bold;
+    font-size: 20PX;
+    border-radius: 5PX;
+}
+
+#equals {
+    width: 202PX;
+    margin: 5PX;
+    height: 50PX;
+    font-weight: bold;
+    font-size: 20PX;
+    border-radius: 5PX;
+}
