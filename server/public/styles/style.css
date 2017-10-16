@@ -3,10 +3,12 @@ html {
     font-align: center;
 }
 
+
+
 .screen {
-    width: 400PX;
+    width: 402PX;
     height: 75PX;
-    background-color: black;
+    background-color: grey;
     color: white;
     font-weight: bold;
     font-size: 50PX;
@@ -15,7 +17,13 @@ html {
     padding: 15PX;
     margin-bottom: 10PX;
     border-radius: 5PX;
+    margin-top: 10PX;
+    border-style: solid;
+    border-width: 3PX;
+    border-color: black;
+
 }
+
 
 .calcbuttons {
     width: 400PX;
@@ -29,6 +37,7 @@ html {
     font-weight: bold;
     font-size: 20PX;
     border-radius: 5PX;
+    margin-left: 6PX;
 }
 
 .operator {
@@ -44,22 +53,27 @@ html {
     width: 205PX;
     margin: 5PX;
     height: 50PX;
+    margin-left: 6PX;
 }
 
 #clear {
-    width: 312PX;
+    width: 315PX;
     margin: 5PX;
     height: 50PX;
     font-weight: bold;
     font-size: 20PX;
     border-radius: 5PX;
+    margin-left: 6PX;
 }
 
 #equals {
-    width: 202PX;
+    width: 204PX;
     margin: 5PX;
     height: 50PX;
     font-weight: bold;
     font-size: 20PX;
     border-radius: 5PX;
+    margin-left: 6PX;
 }
+
+
